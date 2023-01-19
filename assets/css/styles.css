@@ -3,6 +3,7 @@ body{
     margin: 0;
     background-color: #000; 
     color: white;
+    width: 100vw;
 } 
 
 .container{
@@ -499,5 +500,18 @@ textarea{
 
     100%{
         transform: translateX(0);
+    }
+}
+
+/* media query */
+@media screen and (max-width:567px) {
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .mail, .main, .top{
+        display: flex;
+        flex-direction: column;
     }
 }
