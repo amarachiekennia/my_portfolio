@@ -3,25 +3,22 @@ body{
     margin: 0;
     background-color: #000; 
     color: white;
-    width: 100vw;
+    width: 100%;
 } 
 
 .container{
     width: 100%;
     height: 100%;
-    margin: 2rem;
 }
 
 .top{
-  width: 100%;
-  height: 5rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.menu{
-    display: grid;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
 
 .menu img{
     width: 5rem;
@@ -30,25 +27,44 @@ body{
     border-radius: 50%;
 }
 
-.menu ul{
+.toright{
     display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    margin-top: -4rem;
+    align-items: center;
 }
 
-.menu ul li:not(last-of-type){
+
+.toright ul{
+    display: flex;
+}
+
+.toright ul li{
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+.toright ul li:not(last-of-type){
     padding-right: 5rem;
 }
 
 
-.menu ul li a{
+.toright ul li a{
     text-decoration: none;
     color: white;
+    transition: all 2s;
 }
 
 .top a:hover {
-    color: brown;
+    color: red;
+    background-color: cornflowerblue;
+    font-size: 2rem;
+}
+
+.top .toright span{
+    font-size: x-large;
+    display: none;
+    padding-right: 30px;
+
 }
 
 
@@ -56,7 +72,6 @@ body{
 .mail{
     width: 100%;
     height: 100%;
-    position: absolute;
     right: 0;
 }
 
@@ -69,8 +84,7 @@ body{
     height: auto;
     position: absolute;
     transform: rotate(90deg);
-    top: 200px;
-    /* left: 1100px; */
+    top: 160px;
     right: 0;
     font-size: larger;
     position: fixed;
@@ -86,8 +100,8 @@ body{
     height: auto;
     position: absolute;
     padding: 1rem;
-    left: 28rem;
-    top: 0.3rem;
+    left: 30rem;
+    top: 6rem;
     font-size: larger;
     text-align: justify;
 }
@@ -155,12 +169,8 @@ body{
 .social{
     width: 10%;
     height: auto;
-    /* position: absolute; */
-    /* background-color:white; */
-    color: #000;
-    top: 8rem;
-    /* position: fixed;s */
-    z-index: 20;
+    top: 5rem;
+    position: fixed;
 }
 
 .social ol{
@@ -504,14 +514,155 @@ textarea{
 }
 
 /* media query */
-@media screen and (max-width:567px) {
+@media screen and (max-width:540px) {
     .container{
         width: 100%;
+        height: 100%;
+    }
+    .top .toright ul{
+        display: none;
+    }
+
+    .top .toright ul li{
+        color: white;
+    }
+
+    .top .toright span{
+        display: block;
+    }
+
+    .top .toright:hover ul{
+        display: block;
+        position: absolute;
+        z-index: 100;
+        left: 250px;
+        top: 10px;
+    }
+
+
+    .combine {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        height: 100%;
     }
-    .mail, .main, .top{
-        display: flex;
-        flex-direction: column;
+
+    .photo img{
+        width: 200px;
+        height: 100px;
+        top: -10px;
     }
+
+    .main .larger {
+        font-size:small;
+        text-align: center;
+    }
+
+    .main {
+        width: 70%;
+        left: 5em;
+        top: 9.4rem;
+        font-size: medium;
+        text-align: justify;
+    }
+
+    .about {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about h3 {
+        font-size: large;
+    }
+    .about ul{
+        margin-left: 35px;
+        font-size: medium;
+    }
+
+    .justify{
+        width: 70%;
+        height: 100%;
+        margin-left: 77px;
+        text-align: justify;
+        font-size: medium;
+    }
+
+    .home{
+        margin-left: 21rem;
+        margin-top: -20.5rem;
+        font-size: 2.5rem;
+    }
+
+    .skill{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .skill h3{
+        font-size: large;
+        text-align: center;
+    }
+    
+    .skill img{
+        width: 35%;
+        left: 6rem;
+    }
+
+    button{
+        width: 20%;
+        margin-top: 4rem;
+        border-radius: 100%;
+        left: 19rem;
+    }
+
+    .shome{
+        margin-left: 20rem;
+        margin-top: 9rem;
+        font-size: 2.5rem;
+    }
+
+    .contact{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact h3 {
+        font-size: large;
+    }
+
+    .contact p{
+        font-size: medium;
+        margin-left: -50px;
+    }
+    
+    form {
+        font-size: medium;
+        margin-left: -50px;
+    }
+    
+    .form-element input {
+        width: 330px;
+        height: 25px;
+    }
+    
+    textarea {
+        width: 330px;
+    }
+
+    .submit {
+        padding-left: 240px;
+    }
+    
+   .submit input {
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+   }
+
+   .chrome a{
+    margin-left: 17rem;
+    font-size: 2.5rem;
+} 
+    
 }
